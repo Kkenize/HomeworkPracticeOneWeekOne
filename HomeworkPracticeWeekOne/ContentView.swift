@@ -11,11 +11,11 @@ struct ContentView: View {
     @State private var message = "My First Swift App!"
     var body: some View {
         VStack {
-            Image(systemName: "swift")
+            Image("image1")
                 .resizable()
                 .scaledToFit()
-                .foregroundStyle(.yellow)
-                .frame(width: 200, height: 200)
+                .clipShape(RoundedRectangle(cornerRadius: 50))
+                .shadow(radius: 50)
             Text(message)
                 .bold()
                 .font(.largeTitle)
